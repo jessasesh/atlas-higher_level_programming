@@ -1,8 +1,2 @@
-Python - Hello, World
-Learning Objectives
-General
-How to use the Python interpreter
-How to print text and variables using print
-How to use strings
-What are indexing and slicing in Python
-What is the official Python coding style and how to check your code with pycodestyle
+## Python
+# This Repo contains all of the projects I have completed while enrolled into Atlas School. I am earning my education towards becoming a Full-Stack Engineer.
