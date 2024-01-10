@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-# Function that prints a dictionary by ordered keys
-
-def print_sorted_dictionary(my_dict):
-    for key in sorted(my_dict.keys()):
-        print("{:s}: {}".format(key, my_dict[key]))i
+# Funstion that prints a dictionary by ordered keys
+def print_sorted_dictionary(a_dictionary):
+    for key in sorted(a_dictionary.keys()):
+        print("{:s}: {}".format(key, a_dictionary[key]))
