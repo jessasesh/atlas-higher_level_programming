@@ -35,7 +35,7 @@ class Square:
         """Prints the square using #"""
         if self.__size == 0:
             print("")
-        elif:
+        else:
             print("#", end="")
             print("")
 ~                                           
