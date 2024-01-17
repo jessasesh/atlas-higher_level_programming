@@ -10,7 +10,7 @@ class Square:
         """Initializes new square
 
         Args:
-            size (int): the size of new square 
+            size (int): the size of new square
             (private instance attribute)
         """
         if not isinstance(size, int):
