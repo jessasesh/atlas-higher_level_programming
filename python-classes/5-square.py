@@ -11,7 +11,7 @@ class Square:
 
         Args:
             size (int): the size of new square
-         """
+        """
         self.size = size
 
     @property
