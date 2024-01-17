@@ -1,0 +1,44 @@
+Test file for 0-add_integer
+===========================
+
+This module takes two integers as arguments and returns the sum
+
+Function: add_integer()
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Tests
+=====
+
+Adding two positive integers
+    >>> add_integer(2, 2)
+    4
+
+Adding two negative integers
+    >>> add_integer(-2, -2)
+    -4
+
+Adding two positive floats
+    >>> add_integer(2.2, 2.2)
+    4
+
+Adding two negative floats
+    >>> add_integer(-2.2, -2.2)
+    -4
+
+If attepting to add when a is an int and b is a string
+    >>> add_integer(2, "string")
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+If attepting to add when b is an int and a is a string
+    >>> add_integer("string", 2)
+    Traceback (most recent call last):
+	...
+    TypeError: a must be an integer
+
+If passing no argument to the function
+    >>> add_integer(None)
+    Traceback (most recent call last):
+	      ...
+    TypeError: a must be an integer
