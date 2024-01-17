@@ -32,7 +32,10 @@ class Square:
         return (self.__size * self.__size)
 
     def my_print(self):
-        """Prints the square using #"""
+        """Prints the square using #
+        If the size is 0, prints an empty line.
+        Otherwise, prints a '#' followed by a new line
+        """
         if self.__size == 0:
             print("")
         else:
