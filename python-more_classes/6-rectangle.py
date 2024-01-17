@@ -64,3 +64,11 @@ class Rectangle:
             return int(0)
         else:
             return ((self.__height * 2) + (self.__width * 2))
+
+    def __repr__(self):
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """Displays a message for every object that's deleted"""
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
