@@ -7,7 +7,7 @@ import hidden_4
 
 if __name__ == "__main__":
 
-    # Loop that iterates over member within 
+    # Loop that iterates over member within
     # hidden_4 module
     for member_name in dir(hidden_4):
         # Checks if member is not hidden
