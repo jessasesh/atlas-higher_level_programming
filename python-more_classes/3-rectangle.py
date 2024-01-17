@@ -16,7 +16,7 @@ class Rectangle:
         self.width = width
         self.height = height
 
-     def __str__(self) -> str:
+    def __str__(self) -> str:
         """Prints string to give visual of the rectangle defined for an object"""
         if self.__width == 0 or self.__height == 0:
             return ("")
