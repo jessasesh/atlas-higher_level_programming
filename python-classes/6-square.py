@@ -3,10 +3,10 @@
 Program that defines a square
 
 """
-
-# Define class and name it Square
 class Square:
-    
+    """
+    Defines class named Square
+    """
     # Initialize data
     def __init__(self, size=0, position=(0, 0)):
         
