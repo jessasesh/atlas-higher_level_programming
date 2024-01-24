@@ -10,7 +10,7 @@ def lookup(obj):
     """
     Returns a list of attributes available
     for a given object.
-    
+
     Args:
         obj: The object for which attributes
              need to be looked up.
