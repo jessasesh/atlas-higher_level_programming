@@ -14,10 +14,7 @@ class Base:
         Args:
             id: integer, no test required
         """
-        # This ensures that each object created
-        # without specifying an id receives a
-        # unique id starting from 1 and
-        # incrementing with each new object.
+
         if id is not None:
             self.id = id
         else:
