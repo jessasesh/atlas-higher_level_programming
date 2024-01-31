@@ -3,6 +3,8 @@
 
 """Defines the first class"""
 import json
+
+
 class Base:
     """Base Class created"""
     __nb_objects = 0
