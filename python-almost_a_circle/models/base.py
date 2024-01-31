@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Write the first class"""
+
+
+"""Defines the first class"""
 import json
 class Base:
     """Base Class created"""
