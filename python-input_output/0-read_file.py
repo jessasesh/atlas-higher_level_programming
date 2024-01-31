@@ -7,7 +7,7 @@ prints it to stdout.
 
 def read_file(filename=""):
     """
-    Opens, reads, and prints text file 
+    Opens, reads, and prints text file
     to stdout.
     """
     with open(filename, encoding="utf-8") as f:
