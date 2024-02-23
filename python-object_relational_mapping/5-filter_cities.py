@@ -8,14 +8,30 @@ import sys
 
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(host="localhost", user=sys.argv[1],
-                         passwd=sys.argv[2], db=sys.argv[3], port=3306)
-    cur = db.cursor()
-    cur.execute("""SELECT cities.name FROM
-                cities INNER JOIN states ON states.id=cities.state_id
-                WHERE states.name=%s""", (sys.argv[4],))
-    rows = cur.fetchall()
-    tmp = list(row[0] for row in rows)
-    print(*tmp, sep=", ")
-    cur.close()
+    username = sys.argv[1]
+    password = sys.argv[2]
+    database = sys.argv[3]
+    matchName = sys.argv[4].split(';')[0].strip("'")
+
+    db = MySQLdb.connect(
+        host="localhost",
+        port=3306, user=username,
+        passwd=password, db=database,
+        charset="utf8")
+
+    crsr = db.cursor()
+    crsr.execute("SELECT c.name \
+                FROM cities AS c \
+                JOIN states AS st \
+                    ON c.state_id = st.id \
+                WHERE st.name = '{}' ORDER BY c.id".format(matchName))
+    q_rows = crsr.fetchall()
+    complete = 0
+    for row in q_rows:
+        if complete > 0:
+            print(", ", end="")
+        print(row[0], end="")
+        complete += 1
+    print()
+    crsr.close()
     db.close()
