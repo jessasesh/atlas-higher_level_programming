@@ -2,36 +2,32 @@
 """  
 Lists all states from specified database
 """
-
 import MySQLdb
 import sys
 
 
+def all_cities():
+
+    DB = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
+                         passwd=sys.argv[2], db=sys.argv[3])
+
+   
+    cursor = DB.cursor()
+
+  
+    cursor.execute("SELECT cities.name \
+                    FROM cities \
+                    INNER JOIN states ON cities.state_id = states.id \
+                    WHERE states.name = %s \
+                    ORDER BY cities.id ASC", (sys.argv[4],))
+
+    cities = cursor.fetchall()
+
+    print(", ".join([record[0] for record in cities]))
+
+    cursor.close()
+    DB.close()
+
+
 if __name__ == "__main__":
-    username = sys.argv[1]
-    password = sys.argv[2]
-    database = sys.argv[3]
-    matchName = sys.argv[4].split(';')[0].strip("'")
-
-    db = MySQLdb.connect(
-        host="localhost",
-        port=3306, user=username,
-        passwd=password, db=database,
-        charset="utf8")
-
-    crsr = db.cursor()
-    crsr.execute("SELECT c.name \
-                FROM cities AS c \
-                JOIN states AS st \
-                    ON c.state_id = st.id \
-                WHERE st.name = '{}' ORDER BY c.id".format(matchName))
-    q_rows = crsr.fetchall()
-    complete = 0
-    for row in q_rows:
-        if complete > 0:
-            print(", ", end="")
-        print(row[0], end="")
-        complete += 1
-    print()
-    crsr.close()
-    db.close()
+    all_cities()
