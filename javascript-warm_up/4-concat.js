@@ -1,4 +1,4 @@
-!#/usr/bin/node
+#!/usr/bin/node
 // Check if two arguments are passed to the script
 if (process.argv[2] !== undefined && process.argv[3] !== undefined) {
   // Print the two arguments in the specified format
