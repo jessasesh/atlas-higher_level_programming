@@ -1,3 +1,4 @@
+#!/usr/bin/node
 // Check if no arguments are passed
 if (process.argv.length === 2) {
   console.log('No argument');
