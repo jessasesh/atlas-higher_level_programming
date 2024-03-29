@@ -13,6 +13,7 @@ const toWrite = process.argv[3];
 fs.writeFile(filePath, toWrite, 'utf8', function (error) {
   // Check if an error occurred during writing
   if (error) {
-    console.error(error); // Print the error object if an error occurred
+    // Print the error object if an error occurred
+    console.error(error);
   }
 });
