@@ -9,16 +9,14 @@ const movieId = process.argv[2];
 const URL = 'https://swapi-api.hbtn.io/api/films/';
 
 // Make a GET request to the Star Wars API with the specified movie ID
-request.get(URL, (error, response, body) => {
+request.get(URL + movieId, function (error, response, body) {
   if (error) {
-    // Print the error object if an error occurred
+    // Print the error
     console.error(error);
   } else {
-    // Parse the JSON response body to extract the movie title
+    // Parse the JSON response to extract the movie title
     const movieData = JSON.parse(body);
-    const movieTitle = movieData.title;
-
-    // Print the movie title
-    console.log(movieTitle);
+    // Print movie title
+    console.log(movieData.title);
   }
 });
