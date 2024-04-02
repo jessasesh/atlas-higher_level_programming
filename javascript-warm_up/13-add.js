@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 // Define a function named 'add' that takes two integer parameters
-function add(a, b) {
+function add (a, b) {
   return a + b;
 }
 
