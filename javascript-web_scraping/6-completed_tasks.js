@@ -33,8 +33,6 @@ request.get(apiUrl, function (error, response, body) {
     }
   });
 
-  // Print the number of completed tasks for each user
-  for (let userId in completedTasksByUser) {
-    console.log('User ' + userId + ' has completed ' + completedTasksByUser[userId] + ' tasks.');
-  }
+  // Print the object containing the count of completed tasks for each user as JSON
+  console.log(JSON.stringify(completedTasksByUser));
 });
