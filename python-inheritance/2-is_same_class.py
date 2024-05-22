@@ -7,7 +7,8 @@ the provided object is an exact instance of a specified class.
 
 def is_same_class(obj, a_class):
     """
-    Function that determines whether the provided object is an instance of the specified class.
+    Function that determines whether the provided object
+    is an instance of the specified class.
 
     Args:
         obj: The object to evaluate.
