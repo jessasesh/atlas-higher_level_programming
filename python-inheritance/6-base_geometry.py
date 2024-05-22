@@ -13,4 +13,3 @@ class BaseGeometry:
         Basic and unfinished method for calculating area.
         """
         raise Exception("area() is not implemented")
-    
