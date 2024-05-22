@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-The module checks whether an object is an 
+The module checks whether an object is an
 instance or a subclass of a specified class.
 """
 
