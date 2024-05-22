@@ -1,8 +1,3 @@
-# Test file for 1-my_list.py #
-from __future__ import annotations
-from typing import List
-from my_list import MyList
-
 # Test cases for print_sorted method #
 
 # Empty list case
