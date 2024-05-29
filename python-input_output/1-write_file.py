@@ -6,4 +6,12 @@ and returns the number of characters written.
 
 
 def write_file(filename="", text=""):
-    with
+    """
+    Args:
+        filename
+        text
+    """
+    with open(filename, "w", encoding="UTF-8") as file:
+        file.write(text)
+
+    return len(text)
