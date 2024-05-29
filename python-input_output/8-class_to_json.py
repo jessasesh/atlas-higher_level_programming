@@ -6,4 +6,8 @@ for JSON serialization of an object.
 """
 
 
-def class_to_json(obj)
+def class_to_json(obj):
+    """
+    Convert a Python object to a dictionary representation.
+    """
+    return obj.__dict__
