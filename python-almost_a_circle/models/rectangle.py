@@ -140,10 +140,10 @@ class Rectangle(Base):
         Returns a dictionary representation of a rectangle.
         """
         dictionary = {
-        "id": self.id,
-        "x": self.x,
-        "y": self.y,
-    }
+            "id": self.id,
+            "x": self.x,
+            "y": self.y,
+        }
         if hasattr(self, 'size'):
             dictionary["size"] = self.size
         else:
