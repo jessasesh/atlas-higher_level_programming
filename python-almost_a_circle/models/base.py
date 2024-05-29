@@ -47,7 +47,7 @@ class Base:
                 list_dicts = [o.to_dictionary() for o in list_objs]
                 jsonfile.write(Base.to_json_string(list_dicts))
 
-    @classmethod
+    @staticmethod
     def from_json_string(cls, json_string):
         """
         Returns the list of the JSON string.
