@@ -48,7 +48,7 @@ class Base:
                 jsonfile.write(Base.to_json_string(list_dicts))
 
     @staticmethod
-    def from_json_string(cls, json_string):
+    def from_json_string(json_string):
         """
         Returns the list of the JSON string.
         """
