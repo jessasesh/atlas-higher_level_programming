@@ -105,3 +105,10 @@ class Rectangle(Base):
         Returns area of Rectangle.
         """
         return self.height * self.width
+
+    def display(self):
+        """
+        Prints visual representation.
+        """
+        for row in range(self.height):
+            print("#" * self.width)
