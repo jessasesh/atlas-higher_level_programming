@@ -52,6 +52,6 @@ class Base:
         """
         Returns the list of the JSON string.
         """
-        if json_string is None or json_string == "[]":
+        if json_string is None or json_string == "":
             return []
         json.loads(json_string)
