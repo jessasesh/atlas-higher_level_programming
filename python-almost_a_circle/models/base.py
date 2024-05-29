@@ -32,4 +32,4 @@ class Base:
         if list_dictionaries is None or len(list_dictionaries) == "":
             return []
         else:
-            return json.loads(list_dictionaries)
+            return json.dumps(list_dictionaries)
