@@ -117,4 +117,6 @@ class Rectangle(Base):
         """
         Returns string representation.
         """
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        return ("[Rectangle] ({}) {}/{} - {}/{}"format(
+            self.id, self.x, self.y, self.width, self.height
+        ))
