@@ -112,3 +112,9 @@ class Rectangle(Base):
         """
         for row in range(self.height):
             print("#" * self.width)
+
+    def __str__(self):
+        """
+        Returns string representation.
+        """
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self/height}"
