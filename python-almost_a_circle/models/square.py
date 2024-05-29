@@ -5,7 +5,6 @@ Write a class that inherits from another class.
 from models.rectangle import Rectangle
 
 
-
 class Square(Rectangle):
     """
     Creates subclass of Rectangle.
