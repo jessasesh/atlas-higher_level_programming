@@ -46,7 +46,7 @@ class Base:
         for obj in list_objs:
             obj_dict = {}
             for key, value in obj.__dict__.items():
-                if not key.startswwith(" "):
+                if not key.startswith(" "):
                     obj_dict[key] = value
             json_list.append(obj_dict)
 
