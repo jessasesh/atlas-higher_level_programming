@@ -10,17 +10,17 @@ from models.base import Base
 class Rectangle(Base):
     """
     Initializes new subclass of Base.
-
-    Args:
-        width
-        height
-        x
-        y
-        id
     """
     def __init__(self, width, height, x=0, y=0, id=None):
         """
-        
+        Private instances.
+
+        Args:
+            width
+            height
+            x
+            y
+            id
         """
         self.width = width
         self.height = height
