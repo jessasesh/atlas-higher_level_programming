@@ -137,11 +137,16 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """
-        Reutrns a dictionary representation of a rectangle.
+        Returns a dictionary representation of a rectangle.
         """
-        return {
-            "id": self.id,
-            "size": self.size,
-            "x": self.x,
-            "y": self.y,
-        }
+        dictionary = {
+        "id": self.id,
+        "x": self.x,
+        "y": self.y,
+    }
+        if hasattr(self, 'size'):
+            dictionary["size"] = self.size
+        else:
+            dictionary["width"] = self.width
+            dictionary["height"] = self.height
+        return dictionary
